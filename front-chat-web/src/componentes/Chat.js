@@ -1,34 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
-import socket from "./Socket";
-import "../App.css";
+import React, { useState, useEffect, useRef } from 'react';
+import socket from './Socket';
+import '../App.css';
 
 const Chat = ({ nombre }) => {
-  const [mensaje, setMensaje] = useState("");
+  const [mensaje, setMensaje] = useState('');
   const [mensajes, setMensajes] = useState([]);
 
   useEffect(() => {
-    socket.emit("conectado", nombre);
+    socket.emit('conectado', nombre);
   }, [nombre]);
 
   useEffect(() => {
-    socket.on("mensajes", (mensaje) => {
+    socket.on('mensajes', (mensaje) => {
       setMensajes([...mensajes, mensaje]);
     });
 
     return () => {
-      socket.off();
+      socket.off('off');
     };
   }, [mensajes]);
 
   const divRef = useRef(null);
   useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: "smooth" });
+    divRef.current.scrollIntoView({ behavior: 'smooth' });
   });
 
   const submit = (e) => {
     e.preventDefault();
-    socket.emit("mensaje", nombre, mensaje);
-    setMensaje("");
+    socket.emit('mensaje', nombre, mensaje);
+    setMensaje('');
   };
 
   return (
