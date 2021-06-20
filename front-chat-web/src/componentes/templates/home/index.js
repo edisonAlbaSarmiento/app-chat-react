@@ -1,14 +1,25 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-import { ContentTempleate } from './style';
+import {
+  ContentTempleate,
+  MainLayout,
+  HeaderLayout,
+  ContentLayout,
+  FooterLayout,
+} from './style';
 
 const HomeTemplate = (props) => {
   const { children } = props;
   return (
-    <div>
-      <ContentTempleate>{children}</ContentTempleate>
-    </div>
+    <>
+      <MainLayout>
+        <HeaderLayout className="header">Header</HeaderLayout>
+        <ContentLayout className="content">
+          <ContentTempleate>{children}</ContentTempleate>
+        </ContentLayout>
+        <FooterLayout className="footer">Footer</FooterLayout>
+      </MainLayout>
+    </>
   );
 };
 
