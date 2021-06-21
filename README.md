@@ -20,6 +20,21 @@ El backend va correr en el puerto 5000
 
 <img src="images/example-run.png"  width=400>
 
+
+## SE DEBE ABRIR DOS PESTAÑAS EN EL NAVEGADOR PARA SIMULAR DOS USUARIO
+
+como se evidencia en las siguientes imagenes:
+
+* Pestaña 1
+
+<img src="images/image-example.png"  width=400>
+
+* Pestaña 2
+
+<img src="images/image-example-2.png"  width=400>
+
+
+
 ## NOTA
 
 * Se debe correr ambos proyectos para evidenciar su funcionalidad 
