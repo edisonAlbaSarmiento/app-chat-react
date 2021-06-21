@@ -14,7 +14,7 @@
 
 * `yarn start` - inicialización de proyecto
 
-El backend va corren en el puerto 5000
+El backend va correr en el puerto 5000
 
 ## EVIDENCIA DE PROYECTOS INICIADOS
 
