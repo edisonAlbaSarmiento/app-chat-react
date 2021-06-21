@@ -1,4 +1,4 @@
-## INICIAR PROYECTO FRONT
+## INICIAR PROYECTO FRONT-END
 
 * `cd front-chat-web` - ruta donde se encuentra el proyecto
 
@@ -6,7 +6,7 @@
 
 * `yarn start` - inicialización de proyecto
 
-## INICIAR PROYECTO FRONT
+## INICIAR PROYECTO BACKEND
 
 * `cd backend-chat` - ruta donde se encuentra el proyecto
 
