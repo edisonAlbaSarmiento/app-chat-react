@@ -2,7 +2,7 @@
 
 * `cd front-chat-web` - ruta donde se encuentra el proyecto
 
-* `yarn` - instalación de dependencias
+* `yarn` - instalación de dependencias por primera vez
 
 * `yarn start` - inicialización de proyecto
 
@@ -10,7 +10,7 @@
 
 * `cd backend-chat` - ruta donde se encuentra el proyecto
 
-* `yarn` - instalación de dependencias
+* `yarn` - instalación de dependencias por primera vez
 
 * `yarn start` - inicialización de proyecto
 
