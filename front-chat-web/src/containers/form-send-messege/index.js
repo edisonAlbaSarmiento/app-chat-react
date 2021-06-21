@@ -1,34 +1,23 @@
 import React from 'react';
-import {
-  ContentForm,
-  FormContent,
-  InputForm,
-  ButtonForm,
-  ContentButton,
-  ContentTitle,
-} from './style';
-import { TitleComponet } from '../../componentes/atoms';
+import { ContentForm, FormContent, InputForm, ContentFormInput } from './style';
+import { SendOutlined } from '@ant-design/icons';
 
 import { useTheme } from 'styled-components';
 
-function FormSendMessage({ submit, setMensaje, mensaje }) {
+function FormSendMessage({ submit, setMessageClean, messageClean }) {
   const theme = useTheme();
 
   return (
     <ContentForm>
       <FormContent onSubmit={submit}>
-        <ContentTitle>
-          <TitleComponet fontSize="18px" color={theme.color.white}>
-            Escriba su mensaje
-          </TitleComponet>
-        </ContentTitle>
-        <InputForm
-          value={mensaje}
-          onChange={(e) => setMensaje(e.target.value)}
-        />
-        <ContentButton>
-          <ButtonForm>Guardar</ButtonForm>
-        </ContentButton>
+        <ContentFormInput>
+          <InputForm
+            placeholder="Escribe un mensaje"
+            value={messageClean}
+            onChange={(e) => setMessageClean(e.target.value)}
+          />
+          <SendOutlined style={{ color: theme.color.black }} />
+        </ContentFormInput>
       </FormContent>
     </ContentForm>
   );

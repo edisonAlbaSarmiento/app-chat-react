@@ -3,37 +3,36 @@ import socket from '../../../service';
 import { FormSendMessage } from '../../../containers';
 import { CardMenssage } from '../../molecules';
 
-const ChatComponent = ({ nombre }) => {
-  const [mensaje, setMensaje] = useState('');
-  const [mensajes, setMensajes] = useState([]);
+const ChatComponent = ({ nameUser }) => {
+  const [messageUser, setMessageClean] = useState('');
+  const [messagesUser, setMessages] = useState([]);
 
   useEffect(() => {
-    socket.emit('conectado', nombre);
-  }, [nombre]);
+    socket.emit('connectUser', nameUser);
+  }, [nameUser]);
 
   useEffect(() => {
-    socket.on('mensajes', (mensaje) => {
-      setMensajes([...mensajes, mensaje]);
+    socket.on('messages', (message) => {
+      setMessages([...messagesUser, message]);
     });
 
     return () => {
       socket.off();
     };
-  }, [mensajes]);
+  }, [messagesUser]);
 
   const submit = (e) => {
     e.preventDefault();
-    socket.emit('mensaje', nombre, mensaje);
-    setMensaje('');
+    socket.emit('message', nameUser, messageUser);
+    setMessageClean('');
   };
-  console.log('mensajes', mensajes);
   return (
     <div>
-      <CardMenssage mensajes={mensajes} />
+      <CardMenssage message={messagesUser} nameUser={nameUser} />
       <FormSendMessage
         submit={submit}
-        setMensaje={setMensaje}
-        mensaje={mensaje}
+        setMessageClean={setMessageClean}
+        messageClean={messageUser}
       />
     </div>
   );

@@ -6,28 +6,27 @@ import { HomeTemplate } from '../../componentes/templates';
 import '../../App.css';
 
 function Home() {
-  const [nombre, setNombre] = useState('');
+  const [name, setName] = useState('');
   const [register, setRegister] = useState(false);
 
   const setRegisterName = (e) => {
     e.preventDefault();
-    if (nombre !== '') {
+    if (name !== '') {
       setRegister(true);
     }
   };
   return (
     <div>
-      <header className="App-header"></header>
       <HomeTemplate register={register}>
         {!register && (
           <FormSendNameUser
             register={setRegisterName}
-            setNombre={setNombre}
-            nombre={nombre}
+            setName={setName}
+            name={name}
           />
         )}
 
-        {register && <ChatComponent nombre={nombre} />}
+        {register && <ChatComponent nameUser={name} />}
       </HomeTemplate>
     </div>
   );

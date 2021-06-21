@@ -10,7 +10,7 @@ import {
 import { TitleComponet } from '../../componentes/atoms';
 import { useTheme } from 'styled-components';
 
-function FormSendNameUser({ register, setNombre, nombre }) {
+function FormSendNameUser({ register, setName, name }) {
   const theme = useTheme();
 
   return (
@@ -21,7 +21,7 @@ function FormSendNameUser({ register, setNombre, nombre }) {
             Nombre:
           </TitleComponet>
         </ContentTitle>
-        <InputForm value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        <InputForm value={name} onChange={(e) => setName(e.target.value)} />
         <ContentButton>
           <ButtonForm>Guardar</ButtonForm>
         </ContentButton>

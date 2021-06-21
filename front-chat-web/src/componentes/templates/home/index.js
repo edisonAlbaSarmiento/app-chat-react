@@ -8,6 +8,8 @@ import {
   FooterLayout,
 } from './style';
 
+import { Footer } from '../../molecules';
+
 const HomeTemplate = (props) => {
   const { children, register } = props;
   return (
@@ -17,7 +19,11 @@ const HomeTemplate = (props) => {
         <ContentLayout>
           <ContentTempleate>{children}</ContentTempleate>
         </ContentLayout>
-        {register && <FooterLayout>Footer</FooterLayout>}
+        {register && (
+          <FooterLayout>
+            <Footer />
+          </FooterLayout>
+        )}
       </MainLayout>
     </>
   );

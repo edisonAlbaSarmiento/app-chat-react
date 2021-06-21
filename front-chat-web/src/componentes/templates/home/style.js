@@ -21,10 +21,12 @@ export const HeaderLayout = styled(Header)`
   display: flex;
   justify-content: flex-end;
 `;
-export const ContentLayout = styled(Content)`
-  background-color: yellow;
-`;
+export const ContentLayout = styled(Content)``;
 
 export const FooterLayout = styled(Footer)`
-  background-color: green;
+  background-color: ${prop('theme.color.white')};
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
 `;

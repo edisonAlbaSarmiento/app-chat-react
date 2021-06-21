@@ -1,11 +1,11 @@
 {
-  "name": "servidor",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node servidor",
-    "dev": "nodemon servidor"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
