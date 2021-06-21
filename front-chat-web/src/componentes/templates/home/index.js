@@ -9,15 +9,15 @@ import {
 } from './style';
 
 const HomeTemplate = (props) => {
-  const { children } = props;
+  const { children, register } = props;
   return (
     <>
       <MainLayout>
-        <HeaderLayout className="header">Header</HeaderLayout>
-        <ContentLayout className="content">
+        <HeaderLayout>{register ? 'Config' : 'Chat'}</HeaderLayout>
+        <ContentLayout>
           <ContentTempleate>{children}</ContentTempleate>
         </ContentLayout>
-        <FooterLayout className="footer">Footer</FooterLayout>
+        {register && <FooterLayout>Footer</FooterLayout>}
       </MainLayout>
     </>
   );

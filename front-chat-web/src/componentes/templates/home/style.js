@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Layout } from 'antd';
+import { prop } from 'styled-tools';
 
 const { Header, Footer, Content } = Layout;
 
@@ -16,7 +17,9 @@ export const ContentTempleate = styled.div`
 export const MainLayout = styled(Layout)``;
 
 export const HeaderLayout = styled(Header)`
-  background-color: red;
+  background-color: ${prop('theme.color.white')};
+  display: flex;
+  justify-content: flex-end;
 `;
 export const ContentLayout = styled(Content)`
   background-color: yellow;

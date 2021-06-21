@@ -7,27 +7,27 @@ import '../../App.css';
 
 function Home() {
   const [nombre, setNombre] = useState('');
-  const [registrado, setRegistrado] = useState(false);
+  const [register, setRegister] = useState(false);
 
-  const register = (e) => {
+  const setRegisterName = (e) => {
     e.preventDefault();
     if (nombre !== '') {
-      setRegistrado(true);
+      setRegister(true);
     }
   };
   return (
     <div>
       <header className="App-header"></header>
-      <HomeTemplate>
-        {!registrado && (
+      <HomeTemplate register={register}>
+        {!register && (
           <FormSendNameUser
-            register={register}
+            register={setRegisterName}
             setNombre={setNombre}
             nombre={nombre}
           />
         )}
 
-        {registrado && <ChatComponent nombre={nombre} />}
+        {register && <ChatComponent nombre={nombre} />}
       </HomeTemplate>
     </div>
   );
